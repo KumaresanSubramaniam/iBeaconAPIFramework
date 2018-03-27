@@ -26,10 +26,8 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
 
   s.author             = { "kumaresan.subramani" => "kumaresan.subramani@nexttechnosolutions.co.in" }
-  # Or just: s.author    = "kumaresan.subramani"
-   s.authors            = { "kumaresan.subramani" => "kumaresan.subramani@nexttechnosolutions.co.in" }
 
-  s.platform     = :ios, “10.0”
+  s.platform     = :ios
 
   s.source       = { :git => "https://github.com/KumaresanSubramaniam/iBeaconAPIFramework.git", :tag => "1.0.0" }
 
@@ -49,7 +47,7 @@ Pod::Spec.new do |s|
 
   # s.resource  = "icon.png"
   # s.resources = "iBeaconAPIFramework/*.png"
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -60,8 +58,11 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "UIKit"
-  s.frameworks = "UIKit", "CoreLocation”, "CoreBluetooth"
+  s.framework  = "UIKit"
+  s.framework  = "CoreLocation"
+  s.framework  = "CoreBluetooth"
+
+  # s.frameworks = "UIKit", "CoreLocation”, "CoreBluetooth"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
